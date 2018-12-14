@@ -1,0 +1,39 @@
+﻿<Window x:Class="Deel_1___calculator.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:Deel_1___calculator" mc:Ignorable="d"
+		MinHeight="390"
+		MinWidth="500"
+        Title="Calculator : Hidde is mentally retarded" 
+		Height="315.333"
+		Width="258">
+
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition/>
+			<ColumnDefinition/>
+		</Grid.ColumnDefinitions>
+
+		<!--User input form-->
+		<StackPanel>
+			<Label    Margin="10,15,0,0">Eerste getal:</Label>
+			<TextBox  x:Name="TextBox_One" Margin="10,0,10,0"></TextBox>
+			<Label    Margin="10,0,0,0">Tweede getal:</Label>
+			<TextBox  x:Name="TextBox_Two"      Margin="10,0,10,0"></TextBox>
+			<Button   x:Name="Button_Calculate" Height="20" Margin="10,10,10,0" Click="Button_Calculate_Click">Bereken!</Button>
+			<Label    x:Name="Label_Result" Margin="10,30,0,30">12 + 28 = 40</Label>
+
+			<RadioButton x:Name="Radio_Add" Margin="10,5" Click="Radio_operator_Click">Optellen</RadioButton>
+			<RadioButton x:Name="Radio_Subtract" Margin="10,5" Click="Radio_operator_Click">Aftrekken</RadioButton>
+			<RadioButton x:Name="Radio_Multiply" Margin="10,5" Click="Radio_operator_Click">Vermenigvuldigen</RadioButton>
+			<RadioButton x:Name="Radio_Divide"   Margin="10,5" Click="Radio_operator_Click">Delen</RadioButton>
+		</StackPanel>
+
+		
+		<!--History-->
+		<DockPanel Grid.Column="1">
+			<Button x:Name="Button_clear" Margin="10,0,10,10" DockPanel.Dock="Bottom" Height="30" Click="Button_clear_Click">Clear</Button>
+			<ListBox x:Name="ListBox_History" Margin="10,10,10,10" DockPanel.Dock="Top">
+				Super calculator
+			</ListBox>
+		</DockPanel>
+
+	</Grid>
+</Window>
